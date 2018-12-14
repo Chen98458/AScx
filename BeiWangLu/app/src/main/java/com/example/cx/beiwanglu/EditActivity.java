@@ -74,9 +74,7 @@ public class EditActivity extends AppCompatActivity {
             }
         });
     }
-    /**
-     * 初始化编辑页面的值（如果进入该页面时存在一个id的话），比如标题，内容。
-     */
+
     private void initNoteEditValue() {
         // 从Intent中获取id的值
         long id = this.getIntent().getLongExtra("id", -1L);

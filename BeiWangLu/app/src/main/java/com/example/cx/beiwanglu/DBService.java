@@ -46,9 +46,6 @@ public class DBService {
     public static void updateNoteById(Integer id, ContentValues values){
         db.update("NoteBook", values, "_id=?", new String[]{id.toString()});
     }
-    /**
-     * 添加一个笔记，并且记录当前添加的时间
-     */
     public static void addNote(ContentValues values){
         values.put("createTime", DateFormat.format("yyyy-MM-dd kk:mm:ss", System.currentTimeMillis()).toString());
         db.insert("NoteBook", null, values);
