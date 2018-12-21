@@ -63,9 +63,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    /**
-     * 初始化备忘录列表的长按和点击事件
-     */
+
+
     private void initListNoteListener() {
         // 长按删除
         ((ListView) this.findViewById(R.id.listNote)).setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {//长按按钮
@@ -183,8 +182,8 @@ public class MainActivity extends AppCompatActivity {
 }/*
 
 
-    /**
-     * 当从另一个视图进入该视图会调用该方法
+
+
      */
     @Override
     protected void onResume() {
