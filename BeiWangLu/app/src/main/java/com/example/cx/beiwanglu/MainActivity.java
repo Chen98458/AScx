@@ -95,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent in = new Intent();
                 in.setClassName(view.getContext(), "com.example.cx.beiwanglu.EditActivity");
+
                 // 将id数据放置到Intent，切换视图后可以将数据传递过去
                 in.putExtra("id", id);
                 startActivity(in);
