@@ -63,7 +63,51 @@
             android:text="/"
             android:textColor="#0000CD"/>
     </LinearLayout>
-       <LinearLayout
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/but9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#145b7d"
+            android:text="4"
+            android:textColor="#0000CD" />
+
+        <Button
+            android:id="@+id/but10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#145b7d"
+            android:text="5"
+            android:textColor="#0000CD" />
+
+        <Button
+            android:id="@+id/but11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#145b7d"
+            android:text="6"
+            android:textColor="#0000CD" />
+
+        <Button
+            android:id="@+id/but12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#145b7d"
+            android:text="-"
+            android:textColor="#0000CD" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -102,44 +146,6 @@
             android:textColor="#0000CD"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="0dp">
-        <Button
-            android:id="@+id/but9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="#145b7d"
-            android:text="4"
-            android:textColor="#0000CD"/>
-        <Button
-            android:id="@+id/but10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="#145b7d"
-            android:text="5"
-            android:textColor="#0000CD"/>
-        <Button
-            android:id="@+id/but11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="#145b7d"
-            android:text="6"
-            android:textColor="#0000CD"/>
-        <Button
-            android:id="@+id/but12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="#145b7d"
-            android:text="-"
-            android:textColor="#0000CD"/>
-    </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -200,7 +206,6 @@
             android:background="#145b7d"
             android:text="."
             android:textColor="#0000CD"/>
-
     </LinearLayout>
 
 </LinearLayout>
