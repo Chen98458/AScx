@@ -156,7 +156,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
-        protected void onDestroy () {
+        protected void onDestroy () {   //资源释放
         super.onDestroy();
         if (mediaPlayer != null) {
             mediaPlayer.stop();

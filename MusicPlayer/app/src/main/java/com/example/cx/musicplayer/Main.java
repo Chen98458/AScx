@@ -54,7 +54,7 @@ public class Main extends AppCompatActivity {
     }*/
 
 
-    private List<Music> getMusic() {
+    private List<Music> getMusic() {       //获取列表
         List <Music> musicList = new ArrayList <>();
         Cursor cursor = this.getContentResolver().query( MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, null, null, null, MediaStore.Audio.Media.DEFAULT_SORT_ORDER );
         if (cursor.moveToFirst()){

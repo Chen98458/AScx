@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.view.View.OnClickListener;
+import android.widget.Toast;
+
 public class MainActivity extends Activity implements OnClickListener {
     /*EditText editText =(EditText) findViewById(R.id.edit_show);
      button4.setOnClickListener(this) ;
@@ -145,13 +147,14 @@ public class MainActivity extends Activity implements OnClickListener {
                 editText1.append("+");
                 break;
             case R.id.but20:
+                editText1.append("=");
                 switch (a) {
                     case 1:
                         text2 = editText.getText().toString();
                         Double res = Double.parseDouble(text1)
                                 +Double.parseDouble(text2);
                         editText.setText(res+"");
-                        editText1.setText(res+"");
+                        editText1.append(res+"");
 
                         break;
                     case 2:
@@ -159,24 +162,25 @@ public class MainActivity extends Activity implements OnClickListener {
                         Double res2 = Double.parseDouble(text1)
                                 -Double.parseDouble(text2);
                         editText.setText(res2 + "");
-                        editText1.setText(res2+"");
+                        editText1.append(res2+"");
                         break;
                     case 3:
                         text2 = editText.getText().toString();
                         Double res3 = Double.parseDouble(text1)
                                 * Double.parseDouble(text2);
                         editText.setText(res3 + "");
-                        editText1.setText(res3+"");
+                        editText1.append(res3+"");
                         break;
                     case 4:
                         text2 = editText.getText().toString();
                         if(Double.parseDouble(text2)==0){
-                            editText.setText("除数不能为零");
+                            Toast.makeText(MainActivity.this,"除数不能为零",Toast.LENGTH_LONG).show();
+                            break;
                         }
                         Double res4 = Double.parseDouble(text1)
                                 / Double.parseDouble(text2);
                         editText.setText(res4 + "");
-                        editText1.setText(res4+"");
+                        editText1.append(res4+"");
                         break;
                     default:
                         break;
