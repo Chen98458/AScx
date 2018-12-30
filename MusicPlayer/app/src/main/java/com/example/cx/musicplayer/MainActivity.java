@@ -31,8 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     String a = "";
     String a1 = "";
     String a2 = "";
-    private SeekBar seekBar1;
-
+    String a3 ="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +43,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button select = (Button) findViewById(R.id.select);
         Button SYS = (Button) findViewById(R.id.SYS);
         Button XYS = (Button) findViewById(R.id.XYS);
-        seekBar1 = (SeekBar) findViewById(R.id.sb);
         editText = (EditText) findViewById(R.id.Edit);
         play.setOnClickListener(this);
         pause.setOnClickListener(this);
@@ -64,11 +62,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private void sing() {
-        a1 = editText.getText().toString();                                            //获取输入内容
+    /*private void sing() {
+                                                //获取输入内容
         Toast.makeText(this, "选择成功", Toast.LENGTH_SHORT).show();
-        initMediaPlayer1();
-    }
+        initMediaPlayer3();
+    }*/
 
     private void initMediaPlayer() {
         try {
@@ -94,6 +92,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         try {
             File file = new File(Environment.getExternalStorageDirectory(), "/storage/emulated/0/qqmusic/song/" + a2 + ".mp3");
             mediaPlayer.setDataSource(a2);
+            mediaPlayer.prepare();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        a();
+    }
+    private void initMediaPlayer3() {
+        try {
+            File file = new File(Environment.getExternalStorageDirectory(), "/storage/emulated/0/qqmusic/song/" + a3 + ".mp3");
+            mediaPlayer.setDataSource("/storage/emulated/0/qqmusic/song/" + a3 + ".mp3");
             mediaPlayer.prepare();
         } catch (Exception e) {
             e.printStackTrace();
@@ -128,29 +136,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.play:
                 if (!mediaPlayer.isPlaying()) {
                     mediaPlayer.start();
+                    Toast.makeText(MainActivity.this,"开始播放",Toast.LENGTH_LONG).show();
                 }
                 break;
             case R.id.pause:
                 if (mediaPlayer.isPlaying()) {
                     mediaPlayer.pause();
+                    Toast.makeText(MainActivity.this,"暂停播放",Toast.LENGTH_LONG).show();
                 }
                 break;
             case R.id.stop:
                 if (mediaPlayer.isPlaying()) {
                     mediaPlayer.reset();
                     initMediaPlayer();
+                    Toast.makeText(MainActivity.this,"停止播放",Toast.LENGTH_LONG).show();
                 }
                 break;
             case R.id.select:
-                sing();
+                mediaPlayer.reset();
+                a3 = editText.getText().toString();
+                initMediaPlayer3();
                 break;
             case R.id.SYS:
                 mediaPlayer.reset();
                initMediaPlayer1();
+                Toast.makeText(MainActivity.this,"上一首播放",Toast.LENGTH_LONG).show();
                break;
             case R.id.XYS:
                 mediaPlayer.reset();
                 initMediaPlayer2();
+                Toast.makeText(MainActivity.this,"下一首播放",Toast.LENGTH_LONG).show();
                 break;
             default:
                 break;
